@@ -1,28 +1,6 @@
 function Invoke-Mimikatz
 {
 <#
-.SYNOPSIS
-
-This script leverages Mimikatz 2.0 and Invoke-ReflectivePEInjection to reflectively load Mimikatz completely in memory. This allows you to do things such as
-dump credentials without ever writing the mimikatz binary to disk. 
-The script has a ComputerName parameter which allows it to be executed against multiple computers.
-
-This script should be able to dump credentials from any version of Windows through Windows 8.1 that has PowerShell v2 or higher installed.
-
-Function: Invoke-Mimikatz
-Author: Joe Bialek, Twitter: @JosephBialek
-Mimikatz Author: Benjamin DELPY `gentilkiwi`. Blog: http://blog.gentilkiwi.com. Email: benjamin@gentilkiwi.com. Twitter @gentilkiwi
-License:  http://creativecommons.org/licenses/by/3.0/fr/
-Required Dependencies: Mimikatz (included)
-Optional Dependencies: None
-Version: 1.5
-ReflectivePEInjection version: 1.1
-Mimikatz version: 2.0 alpha (2/16/2015)
-
-.DESCRIPTION
-
-Reflectively loads Mimikatz 2.0 in memory using PowerShell. Can be used to dump credentials without writing anything to disk. Can be used for any 
-functionality provided with Mimikatz.
 
 .PARAMETER DumpCreds
 
@@ -2709,6 +2687,7 @@ $RemoteScriptBlock = {
 #Main function to either run the script locally or remotely
 Function Main
 {
+	#KAKA
 	if (($PSCmdlet.MyInvocation.BoundParameters["Debug"] -ne $null) -and $PSCmdlet.MyInvocation.BoundParameters["Debug"].IsPresent)
 	{
 		$DebugPreference  = "Continue"
